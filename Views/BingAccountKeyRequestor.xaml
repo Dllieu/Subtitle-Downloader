@@ -1,0 +1,28 @@
+﻿<Window x:Class="SubtitlesDownloaderWPF.Views.BingAccountKeyRequestor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="BingAccountKeyRequestor" Height="114.236" Width="348" ResizeMode="NoResize">
+    <Grid Name="MainGrid">
+        <!-- Quick and dirty form -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Text="Enter your Bing account key:" FontWeight="Bold" />
+        <TextBox Grid.Row="1" Grid.ColumnSpan="2" x:Name="AccountKey" />
+        <Button Grid.Row="2" Grid.Column="0" Content="OK" Click="ValidateForm" />
+        <Button Grid.Row="2" Grid.Column="1" Content="Cancel" Click="CancelForm" />
+        <TextBlock Grid.Row="3" Grid.ColumnSpan="2">
+            <Hyperlink NavigateUri="https://datamarket.azure.com/account" RequestNavigate="GoToHyperlink">
+                Get a bing account key for the search API
+            </Hyperlink>
+        </TextBlock>
+    </Grid>
+</Window>
